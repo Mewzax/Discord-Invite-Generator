@@ -23,35 +23,45 @@ print('Made by Mewzax')
 saveValidCodes = input('Do you want to save valid codes? (y/n) ')
 saveInvalidCodes = input('Do you want to save invalid codes? (y/n) ')
 
-chars = []
-chars[:0] = string.ascii_letters + string.digits
-
 def saveCodes(code, file):
     with open(file, 'a') as f:
         f.write('\n' + code)
 
+def getCode():
+    code = 'mantle'
+    return code
+
+def getResponse(code):
+    try:
+        with httpx.Client(proxies=f'http://{next(__PROXIES__)}') as client:
+            response = client.post(
+                'https://discordapp.com/api/v6/invite/' + code
+            )
+    except httpx.HTTPError:
+        print('Error: Could not connect to Discord')
+
+    return response
+
 def checkCode(code):
     try:
-        with httpx.Client(proxies= f'http://{next(__PROXIES__)}', timeout=__CONFIG__['proxy_timeout']) as client:
-            response = client.post(
-            'https://discordapp.com/api/v6/invite/' + code
-            )
-            print(response)
+        response = getResponse(code)
     except httpx.HTTPError:
-            print('Error: Could not connect to Discord')
-            if response.status_code == 429:
-                print(code + ' is incorrect')
-                return False
-            else:
-                print(code + ' is correct')
-
-def generateCode():
-    code = "mantle"
-    checkCode(code)
-    if saveValidCodes == 'y' and True:
-        saveCodes(code, 'validCodes.txt')
-    if saveInvalidCodes == 'y' and False:
-        saveCodes(code, 'invalidCodes.txt')
+        print('Error: Could not connect to Discord')
     
-while True:
-    generateCode()
+    if response.status_code == 200:
+        print('Valid code')
+
+        if saveValidCodes == 'y':
+            saveCodes(code, __CONFIG__['path_valid'])
+    
+    elif response.status_code == 400:
+        print('Invalid code')
+
+        if saveInvalidCodes == 'y':
+            saveCodes(code, __CONFIG__['path_invalid'])
+
+
+def main():
+    while True:
+        code = getCode()
+        checkCode(code)
