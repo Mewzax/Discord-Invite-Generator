@@ -5,6 +5,9 @@
 
 <h4 align='center'>✉️ A simple tool to create, check then store discord invites</h4>
 
+## Preview
+<img src="./preview.png">
+
 ## Features
 
 - Generate a lot of discord invites
