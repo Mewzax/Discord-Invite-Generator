@@ -1,5 +1,9 @@
-# Discord-Invite-Generator
-✉️ a simple tool to create discord invites, check them then store it
+<h1 align="center">Discord-Invite-Generator</h1>
+<p align="center">
+<img src=".github/logo.png">
+</p>
+
+<h4 align='center'>✉️ a simple tool to create discord invites, check them then store it</h4>
 
 ## Features
 
@@ -8,9 +12,8 @@
 * Store the invites
 * Proxies support
 
+#### To do:
+- [ ] Add a joiner (u'll probably get a ban lol)
+
 ## Built with
 
-
-To do:
-
-[ ] Add a joiner (u'll probably get a ban lol)
