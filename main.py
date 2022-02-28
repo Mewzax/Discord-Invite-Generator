@@ -17,7 +17,7 @@ __PROXIES__ = itertools.cycle(
 
 def saveCodes(code, file):
     with open(file, "a") as f:
-        f.write(code + "\n")
+        f.write('discord.gg/' + code + "\n")
         f.close()
 
 
