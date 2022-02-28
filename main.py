@@ -110,4 +110,6 @@ def main():
 
 if __name__ == "__main__":
     os.system('cls' if os.name == 'nt' else 'clear')
+    if os.name == "nt":
+        ctypes.windll.kernel32.SetConsoleTitleW('Invite Generator - by Mewzax.')
     main()
