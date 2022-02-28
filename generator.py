@@ -33,9 +33,8 @@ def getCode():
 
 def getResponse(code):
     try:
-        with httpx.Client(proxies=f'http://{next(__PROXIES__)}') as client:
-            response = client.post(
-                'https://discordapp.com/api/v6/invite/' + code
+        response = httpx.post(
+            'https://discordapp.com/api/v6/invite/' + code
             )
     except httpx.HTTPError:
         print('Error: Could not connect to Discord')
@@ -43,11 +42,8 @@ def getResponse(code):
     return response
 
 def checkCode(code):
-    try:
-        response = getResponse(code)
-    except httpx.HTTPError:
-        print('Error: Could not connect to Discord')
     
+    response = getResponse(code)
     if response.status_code == 200:
         print('Valid code')
 
@@ -65,3 +61,6 @@ def main():
     while True:
         code = getCode()
         checkCode(code)
+
+if __name__ == '__main__':
+    main()

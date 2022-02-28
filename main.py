@@ -36,17 +36,16 @@ def checkCode(code):
             response = client.post(
             'https://discordapp.com/api/v6/invite/' + code
             )
-            print(response)
     except httpx.HTTPError:
             print('Error: Could not connect to Discord')
-            if response.status_code == 429:
+            if 'Unknow Invite' in str(response.content):
                 print(code + ' is incorrect')
                 return False
             else:
                 print(code + ' is correct')
 
 def generateCode():
-    code = "mantle"
+    code = "".join(random.choices(chars, k = 8))
     checkCode(code)
     if saveValidCodes == 'y' and True:
         saveCodes(code, 'validCodes.txt')
