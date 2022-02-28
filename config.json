@@ -1,4 +1,0 @@
-{
-    "proxy_timeout": 5,
-    "path_proxies": "proxies.txt"
-}
