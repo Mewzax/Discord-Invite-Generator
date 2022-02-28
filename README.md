@@ -12,4 +12,5 @@
 
 
 To do:
-[ ] Add a joiner (probably get a ban lol)
+
+[ ] Add a joiner (u'll probably get a ban lol)
