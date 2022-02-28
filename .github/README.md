@@ -15,7 +15,7 @@
 - Store the invites
 - Proxies support
 
-## To do:
+## To do
 
 - [ ] Add a joiner (u'll probably get a ban lol)
 
