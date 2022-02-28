@@ -35,8 +35,10 @@
 # Clone the repo:
 git clone https://github.com/Mewzax/Discord-Invite-Generator.git
 cd Discord-Invite-Generator
+
 # Install packages
 pip install -r requirements.txt
+
 # Run the code
 python3 main.py
 ```
