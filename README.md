@@ -28,7 +28,7 @@
 
 ## Installation
 
-```
+```sh
 # Clone the repo:
 git clone https://github.com/Mewzax/Discord-Invite-Generator.git
 cd Discord-Invite-Generator
