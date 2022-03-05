@@ -41,7 +41,7 @@ def checkCode(code):
                     if saveValidCodes == "y":
                         saveCodes(code, __CONFIG__["path_valid"])
 
-                elif "Unknown Invite" in str(response.content):
+                elif "Unknown Invite" in str(response.content) or 'Not Found' in str(response.content):
                     print(Fore.LIGHTRED_EX + "Invalid code: " + code + Fore.RESET)
                     invalid += 1
                     if saveInvalidCodes == "y":
@@ -62,7 +62,7 @@ def checkCode(code):
                 if saveValidCodes == "y":
                     saveCodes(code, __CONFIG__["path_valid"])
 
-            elif "Unknown Invite" in str(response.content):
+            elif "Unknown Invite" in str(response.content) or 'Not Found' in str(response.content):
                 print(Fore.LIGHTRED_EX + "Invalid code: " + code + Fore.RESET)
                 invalid += 1
                 if saveInvalidCodes == "y":
