@@ -4,7 +4,7 @@
 </p>
 
 <h4 align='center'>✉️ A simple tool to generate, check, and store random Discord invites.</h4>
-Made by Mewzax, revised by [RooverPY]("https://github.com/RooverPY).
+<h6 align='center'>Made by Mewzax, revised by [RooverPY]("https://github.com/RooverPY).</h6>
 
 ## Preview
 <img src="./preview.png">
