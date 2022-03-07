@@ -11,7 +11,7 @@
 
 ## Features
 
-- Check and generate 
+- Check and generate invites.q
 - Stores generated invites.
 - Proxy support to prevent ratelimiting.
 
