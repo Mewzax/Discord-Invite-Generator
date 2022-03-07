@@ -3,44 +3,43 @@
 <img src="./logo.png">
 </p>
 
-<h4 align='center'>✉️ A simple tool to create, check then store discord invites</h4>
+<h4 align='center'>✉️ A simple tool to generate, check, and store random Discord invites.</h4>
+Made by Mewzax, revised by [RooverPY]("https://github.com/RooverPY).
 
 ## Preview
 <img src="./preview.png">
 
 ## Features
 
-- Generate a lot of discord invites
-- Checks Invite at the same time for maximum efficiency
-- Store the invites
-- Proxies support
+- Check and generate 
+- Stores generated invites.
+- Proxy support to prevent ratelimiting.
 
 ## To do
 
-- [ ] Add a joiner (u'll probably get a ban lol)
+- [ ] Add a joiner (Account will likely be locked/disabled for triggering Discord anti-spam)
 
 ## Built with
 
-- [httpx](https://www.python-httpx.org)
-- [colorama](https://pypi.org/project/colorama/)
+- [aiohttp](https://docs.aiohttp.org/en/stable/)
 
 ## Requirements
 
 - [Python](https://www.python.org/downloads/)
-- Proxies (optional)
+- Https proxylist (optional).
 
 ## Installation
 
 ```t
 # Clone the repo:
 git clone https://github.com/Mewzax/Discord-Invite-Generator.git
-cd Discord-Invite-Generator
+cd to file destination.
 
 # Install packages
 pip install -r requirements.txt
 
 # Run the code
-python3 main.py
+python main.py
 ```
 
 <p align="center"> 
