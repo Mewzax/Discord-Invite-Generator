@@ -1,11 +1,11 @@
 <h1 align="center">Discord-Invite-Generator</h1>
-Made by Mewzax, revised by [Roover](https://github.com/RooverPY/).
 
 <p align="center">
 <img src="./logo.png">
 </p>
 
 <h4 align='center'>✉️ A simple tool to generate, check, and store random Discord invites.</h4>
+<h6 align='center'>Made by Mewzax, revised by https://github.com/RooverPY/ | Roover#3318.</h6>
 
 ## Preview
 <img src="./preview.png">
