@@ -21,7 +21,8 @@ async def proxgen(amount):
             code = "".join(random.choices(chars, k=8))
             check = await session.get(
                 f"https://discord.com/api/v9/invite/{code}",
-                proxy=f"https://{next(proxies)}"
+                proxy=f"https://{next(proxies)}",
+		    timeout=5
             )
             if check.status == 200:
                 valid.append(code)
@@ -39,7 +40,8 @@ async def gen(amount):
         for i in range(amount):
             code = "".join(random.choices(chars, k=8))
             check = await session.get(
-                f"https://discordapp.com/api/v9/invite/{code}"
+                f"https://discordapp.com/api/v9/invite/{code}",
+		    timeout=5
             )
             if check.status == 200:
                 valid.append(code)
