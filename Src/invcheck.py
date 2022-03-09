@@ -22,7 +22,7 @@ async def proxgen(amount):
 	async with aiohttp.ClientSession() as session:
 		for i in range(amount):
 			code = "".join(random.choices(chars, k=8))
-			check = await session.get(f"https://discord.com/api/v9/invite/{code}", proxy=f"https://{next(proxies)}", headers=headers) # How to do proxies in aiohttp
+			check = await session.get(f"https://discord.com/api/v9/invite/{code}", proxy=f"https://{next(proxies)}", headers=headers)
 			if check.status == 200:
 				valid.append(code) 
 				print(f"{C.GREEN}	Valid {i}: {code}")	
