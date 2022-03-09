@@ -1,7 +1,0 @@
-{
-    "path_valid": "validCodes.txt",
-    "path_invalid": "invalidCodes.txt",
-    "use_proxies": "False",
-    "path_proxies": "proxies.txt",
-    "proxy_timeout": 5
-}
